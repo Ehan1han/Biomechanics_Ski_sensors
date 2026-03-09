@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360">
+  <defs>
+    <style>
+      .title { font: 700 24px Arial, sans-serif; fill: #17324d; }
+      .label { font: 600 18px Arial, sans-serif; fill: #17324d; }
+      .small { font: 400 15px Arial, sans-serif; fill: #234764; }
+      .box1 { fill: #e8f1fb; stroke: #2b6ea6; stroke-width: 2; rx: 18; }
+      .box2 { fill: #eef7e8; stroke: #5e8c31; stroke-width: 2; rx: 18; }
+      .box3 { fill: #fff4df; stroke: #cc8a1d; stroke-width: 2; rx: 18; }
+      .box4 { fill: #f7ebf7; stroke: #8d5aa8; stroke-width: 2; rx: 18; }
+      .box5 { fill: #eaf7f4; stroke: #2c8b72; stroke-width: 2; rx: 18; }
+      .arrow { stroke: #5b7186; stroke-width: 4; fill: none; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto">
+      <polygon points="0 0, 12 6, 0 12" fill="#5b7186"/>
+    </marker>
+  </defs>
+
+  <text x="600" y="42" text-anchor="middle" class="title">Figure 1. Conceptual pipeline for the proposed paper</text>
+
+  <rect x="35" y="95" width="190" height="150" class="box1"/>
+  <text x="130" y="128" text-anchor="middle" class="label">Ski ACL mechanism</text>
+  <text x="130" y="152" text-anchor="middle" class="label">literature</text>
+  <text x="130" y="188" text-anchor="middle" class="small">Slip-catch, forward</text>
+  <text x="130" y="210" text-anchor="middle" class="small">twisting, frontal-plane</text>
+  <text x="130" y="232" text-anchor="middle" class="small">loading geometry</text>
+
+  <rect x="260" y="95" width="190" height="150" class="box2"/>
+  <text x="355" y="128" text-anchor="middle" class="label">Target ACL</text>
+  <text x="355" y="152" text-anchor="middle" class="label">proxy</text>
+  <text x="355" y="198" text-anchor="middle" class="small">Combined valgus plus</text>
+  <text x="355" y="220" text-anchor="middle" class="small">rotation exposure</text>
+
+  <rect x="485" y="95" width="220" height="150" class="box3"/>
+  <text x="595" y="128" text-anchor="middle" class="label">Reference wearable</text>
+  <text x="595" y="152" text-anchor="middle" class="label">system</text>
+  <text x="595" y="188" text-anchor="middle" class="small">17 IMUs plus bilateral</text>
+  <text x="595" y="210" text-anchor="middle" class="small">pressure insoles</text>
+  <text x="595" y="232" text-anchor="middle" class="small">Proxy computation from full data</text>
+
+  <rect x="740" y="95" width="205" height="150" class="box4"/>
+  <text x="842" y="128" text-anchor="middle" class="label">Reduced sensor</text>
+  <text x="842" y="152" text-anchor="middle" class="label">subsets</text>
+  <text x="842" y="188" text-anchor="middle" class="small">Boot only</text>
+  <text x="842" y="210" text-anchor="middle" class="small">Boots plus pelvis</text>
+  <text x="842" y="232" text-anchor="middle" class="small">Lower limb focused sets</text>
+
+  <rect x="980" y="95" width="185" height="150" class="box5"/>
+  <text x="1072" y="128" text-anchor="middle" class="label">Evaluation</text>
+  <text x="1072" y="188" text-anchor="middle" class="small">Reconstruction error</text>
+  <text x="1072" y="210" text-anchor="middle" class="small">Accuracy versus sensor count</text>
+  <text x="1072" y="232" text-anchor="middle" class="small">Best tradeoff configurations</text>
+
+  <path d="M225 170 H252" class="arrow"/>
+  <path d="M450 170 H477" class="arrow"/>
+  <path d="M705 170 H732" class="arrow"/>
+  <path d="M945 170 H972" class="arrow"/>
+
+  <text x="600" y="305" text-anchor="middle" class="small">
+    The paper first synthesizes injury mechanisms, then defines measurable ACL proxies, then proposes a
+  </text>
+  <text x="600" y="327" text-anchor="middle" class="small">
+    reference-system and sensor-minimization study to identify the smallest field-deployable configuration.
+  </text>
+</svg>

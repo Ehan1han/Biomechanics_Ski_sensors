@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="500" viewBox="0 0 1200 500">
+  <defs>
+    <style>
+      .title { font: 700 24px Arial, sans-serif; fill: #17324d; }
+      .panel { fill: #fbfdff; stroke: #c6d3df; stroke-width: 2; rx: 18; }
+      .label { font: 700 18px Arial, sans-serif; fill: #17324d; }
+      .small { font: 400 15px Arial, sans-serif; fill: #36536d; }
+      .body { stroke: #38546d; stroke-width: 6; fill: none; stroke-linecap: round; }
+      .sensorFull { fill: #2b6ea6; }
+      .sensorReduced { fill: #cc8a1d; }
+      .sensorNote { font: 600 14px Arial, sans-serif; fill: #2d475d; }
+    </style>
+  </defs>
+
+  <text x="600" y="40" text-anchor="middle" class="title">Figure 2. Reference and candidate reduced sensor configurations</text>
+
+  <rect x="35" y="80" width="350" height="360" class="panel"/>
+  <rect x="425" y="80" width="350" height="360" class="panel"/>
+  <rect x="815" y="80" width="350" height="360" class="panel"/>
+
+  <text x="210" y="114" text-anchor="middle" class="label">A. Full reference setup</text>
+  <text x="600" y="114" text-anchor="middle" class="label">B. Lower limb plus pelvis</text>
+  <text x="990" y="114" text-anchor="middle" class="label">C. Boot-only minimal setup</text>
+
+  <g transform="translate(0,0)">
+    <circle cx="210" cy="155" r="28" class="body"/>
+    <path d="M210 184 L210 255 M160 220 L260 220 M210 255 L170 330 M210 255 L250 330 M170 330 L160 395 M250 330 L260 395" class="body"/>
+    <circle cx="160" cy="220" r="9" class="sensorFull"/>
+    <circle cx="260" cy="220" r="9" class="sensorFull"/>
+    <circle cx="210" cy="220" r="9" class="sensorFull"/>
+    <circle cx="210" cy="255" r="9" class="sensorFull"/>
+    <circle cx="170" cy="330" r="9" class="sensorFull"/>
+    <circle cx="250" cy="330" r="9" class="sensorFull"/>
+    <circle cx="160" cy="395" r="9" class="sensorFull"/>
+    <circle cx="260" cy="395" r="9" class="sensorFull"/>
+    <text x="210" y="425" text-anchor="middle" class="small">Representative view of a full-body IMU suit</text>
+  </g>
+
+  <g transform="translate(390,0)">
+    <circle cx="210" cy="155" r="28" class="body"/>
+    <path d="M210 184 L210 255 M160 220 L260 220 M210 255 L170 330 M210 255 L250 330 M170 330 L160 395 M250 330 L260 395" class="body"/>
+    <circle cx="210" cy="255" r="10" class="sensorReduced"/>
+    <circle cx="170" cy="330" r="10" class="sensorReduced"/>
+    <circle cx="250" cy="330" r="10" class="sensorReduced"/>
+    <circle cx="160" cy="395" r="10" class="sensorReduced"/>
+    <circle cx="260" cy="395" r="10" class="sensorReduced"/>
+    <text x="210" y="425" text-anchor="middle" class="small">Likely high-value compromise for turning proxies</text>
+  </g>
+
+  <g transform="translate(780,0)">
+    <circle cx="210" cy="155" r="28" class="body"/>
+    <path d="M210 184 L210 255 M160 220 L260 220 M210 255 L170 330 M210 255 L250 330 M170 330 L160 395 M250 330 L260 395" class="body"/>
+    <circle cx="160" cy="395" r="10" class="sensorReduced"/>
+    <circle cx="260" cy="395" r="10" class="sensorReduced"/>
+    <text x="210" y="425" text-anchor="middle" class="small">Lowest burden but likely weaker for load geometry</text>
+  </g>
+
+  <circle cx="170" cy="468" r="8" class="sensorFull"/>
+  <text x="188" y="473" class="sensorNote">Reference-system IMU location</text>
+  <circle cx="430" cy="468" r="8" class="sensorReduced"/>
+  <text x="448" y="473" class="sensorNote">Retained location in reduced configuration</text>
+</svg>
