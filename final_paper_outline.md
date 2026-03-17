@@ -20,6 +20,7 @@
 - ACL injury is a major severe injury in both competitive and recreational alpine skiing.
 - Skiing is biomechanically distinctive because skis, boots, and bindings create sport-specific loading pathways.
 - Preventing skiing ACL injury requires skiing-specific rather than generic field-sport models.
+- Add Hull's UC Davis work as the historical foundation for skiing-specific injury biomechanics, emphasizing instrumented bindings, boot-ski interface load measurement, and model-based inference of knee and tibial loading.
 
 ### 2. Skiing ACL Mechanisms Relevant to Turning
 
@@ -33,11 +34,13 @@
 - ACL rupture is a rare endpoint and cannot be directly reproduced or measured in field experiments.
 - Skiing ACL research therefore depends on mechanism-based and model-based surrogate variables.
 - The most defensible proxy for this paper is combined valgus-plus-rotation exposure because it is directly grounded in the skiing mechanism literature and is more plausibly recoverable from wearable kinematics than more ambitious force-line variables.
+- Use Hull to distinguish externally measured loads from inferred internal injury loading, which supports the paper's logic that wearable signals can reconstruct a mechanism-consistent surrogate rather than claim direct injury-risk measurement.
 
 ### 4. Wearable Sensing in Skiing
 
 - Ski-racing biomechanics has often relied on rich multimodal systems and expert-focused study designs.
 - Full-body IMU and IMU-plus-insole systems show that skiing kinematics and kinetics can be measured outdoors.
+- Add a short technical explanation of why full-body IMU kinematics are feasible, centered on inertial prediction plus calibration, biomechanical-model mapping, joint-constraint updates, and contact-based drift correction.
 - Reduced-sensor studies show that sparse setups can detect turns and quantify motion quality.
 - Placement-sensitive studies show that sensor location matters.
 - However, these wearable studies do not directly address ACL-proxy reconstruction under sensor minimization.
@@ -59,6 +62,8 @@
 
 - Focus on one proxy, combined valgus-plus-rotation exposure, because it is the clearest turning-related ACL surrogate supported by the current literature.
 - Estimate that proxy from a full-body 17-IMU suit plus bilateral plantar pressure insoles, used as a reference platform rather than direct ground truth for injury risk.
+- Frame the wearable reference system as a modern analogue to Hull's instrumented-binding program: Hull estimated injury-relevant loading from boot-ski interface measurements, whereas this paper estimates a knee-state proxy from kinematics plus plantar loading.
+- Explain the theoretical drift-control strategy for skiing: use neutral-pose and functional calibration, then combine gravity and heading correction with joint constraints and pressure-informed ski-contact constraints.
 
 ### 3. Participants, Protocol, and Reduced Configurations
 
@@ -69,6 +74,7 @@
 ### 4. Proxy Computation, Reconstruction, and Evaluation
 
 - Segment turns from the reference system, compute the proxy for each turn, and use those values as the benchmark targets for reduced configurations.
+- State that local segment orientations and joint angles are higher priority than exact global translation, with GPS as an optional aiding sensor if turn-path context is needed.
 - Start with simple, interpretable estimators based on turn-phase and segment-motion features.
 - Evaluate reduced sets with turn-level error metrics and compare fidelity across skier groups and snow conditions.
 - Present the result as a fidelity-versus-sensor-count relationship, using a Pareto-frontier framing to identify promising tradeoffs.
